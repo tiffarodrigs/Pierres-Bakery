@@ -6,11 +6,11 @@ namespace PierresBakery.Tests
   [TestClass]
   public class PastryTests
   {
-    // [TestMethod]
-    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-    // {
-    //   // any necessary logic to prep for test; instantiating new classes, etc.
-    //   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-    // }
+    [TestMethod]
+    public void PastryConstructor_CreateAPastryContructor_Pastry()
+    {
+      Pastry pastryObj =  new Pastry();
+      Assert.AreEqual(typeof(Pastry), pastryObj.GetType());
+    }
   }
 }
