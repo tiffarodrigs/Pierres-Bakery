@@ -36,5 +36,12 @@ namespace PierresBakery.Tests
       int result = pastryObj.CalculatePastryPrice(5);
       Assert.AreEqual(9,result);
     }
+    [TestMethod]
+    public void CalculatePastryPrice_CalculatePriceOfSixPastry_int()
+    {
+      Pastry pastryObj =  new Pastry(6);
+      int result = pastryObj.CalculatePastryPrice(6);
+      Assert.AreEqual(10,result);
+    }
   }
 }

@@ -15,13 +15,13 @@ namespace PierresBakery
       int breadInput = int.Parse(Console.ReadLine());
       Console.WriteLine("How Many Loaves of pastries would you like to order?");
       int pastryInput = int.Parse(Console.ReadLine());
-      Bread breadObj = new Bread();
-      Pastry pastryObj = new Pastry();
+      Bread breadObj = new Bread(breadInput);
+      Pastry pastryObj = new Pastry(pastryInput);
       int totalBreadPrice = breadObj.CalculateBreadPrice(breadInput);
       int totalPastryPrice = pastryObj.CalculatePastryPrice(pastryInput);
       int totalOrderPrice = totalBreadPrice + totalPastryPrice;
       
-      Console.WriteLine(totalOrderPrice);
+      Console.WriteLine("Your total price is $" +totalOrderPrice);
     
     }
   }
