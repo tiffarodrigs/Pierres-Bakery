@@ -25,7 +25,7 @@ namespace PierresBakery.Tests
     public void CalculateBreadPrice_CalculatesPriceOfThreeBreadLoaf_int()
     {
       Bread breadObj =  new Bread(3);
-      int result = breadObj.CalculateBreadPrice(1);
+      int result = breadObj.CalculateBreadPrice(3);
       Assert.AreEqual(10,result);
     }
   }
