@@ -27,12 +27,12 @@ namespace PierresBakery.Models
       {
         if(threeRemainder == 0)
         {
-          totalPrice = countOfThree * priceOfThree;
+          totalPrice = priceOfThree * countOfThree;
         }
         else
         {
-          totalPrice = countOfThree * priceOfThree;
-          totalPrice += threeRemainder * price;
+          totalPrice = priceOfThree * countOfThree;
+          totalPrice += price * threeRemainder;
         }
 
       }
