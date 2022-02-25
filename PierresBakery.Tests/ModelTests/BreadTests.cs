@@ -12,5 +12,13 @@ namespace PierresBakery.Tests
       Bread breadObj =  new Bread(1);
       Assert.AreEqual(typeof(Bread), breadObj.GetType());
     }
+
+    [TestMethod]
+    public void CalculateBreadPrice_CalculatesPriceOfOneBreadLoaf_int()
+    {
+      Bread breadObj =  new Bread(1);
+      int result = breadObj.CalculateBreadPrice(1);
+      Assert.AreEqual(5,result);
+    }
   }
 }
