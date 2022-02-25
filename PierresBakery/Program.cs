@@ -15,7 +15,7 @@ namespace PierresBakery
       int breadInput = int.Parse(Console.ReadLine());
       Console.WriteLine("How Many Loaves of pastries would you like to order?");
       int pastryInput = int.Parse(Console.ReadLine());
-      Bread breadObj = new Bread(breadInput);
+      Bread breadObj = new Bread();
       Pastry pastryObj = new Pastry(pastryInput);
       int totalBreadPrice = breadObj.CalculateBreadPrice(breadInput);
       int totalPastryPrice = pastryObj.CalculatePastryPrice(pastryInput);
