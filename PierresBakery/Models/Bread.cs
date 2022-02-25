@@ -17,16 +17,24 @@ namespace PierresBakery.Models
       int price = 5;
       int priceOfThree = 10;
       int totalPrice;
-      int mutipleOfThree = inputQuantity % 3;
-      int offerQuatity;
-      if(mutipleOfThree == 0)
+      int reminder = inputQuantity % 3;
+      int offerQuantity = inputQuantity / 3;
+
+      if(inputQuantity<3)
       {
-      offerQuatity = inputQuantity / 3;
-      totalPrice = offerQuatity * priceOfThree;
+        totalPrice = inputQuantity * price;
       }
       else
       {
-      totalPrice = inputQuantity * price;
+        if(reminder == 0)
+        {
+          totalPrice = offerQuantity * priceOfThree;
+        }
+        else
+        {
+          totalPrice = offerQuantity * priceOfThree;
+          totalPrice += reminder * price;
+        }
       }
       return totalPrice;
     }
