@@ -3,15 +3,8 @@ namespace PierresBakery.Models
 {
   public class Oven
   {
-    public Oven()
+    public  int CalculatePrice(int inputQuantity,int price,int priceOfThree)
     {
-
-    }
-    public virtual int CalculateBreadPrice(int inputQuantity)
-    {
-
-      int price=1;
-      int priceOfThree=1;
       int totalPrice;
       int threeRemainder = inputQuantity % 3;
       int countOfThree = inputQuantity / 3; 
@@ -33,7 +26,5 @@ namespace PierresBakery.Models
       }
       return totalPrice;
     }
-
-
   }
 }

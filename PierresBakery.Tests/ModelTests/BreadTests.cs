@@ -6,7 +6,7 @@ namespace PierresBakery.Tests
   [TestClass]
   public class BreadTests
   {
-    Bread breadObj =  new Bread();
+    Bread breadObj =  new Bread(5,10);
     [TestMethod]
     public void BreadConstructor_CreateInstanceOfBread_Bread()
     {

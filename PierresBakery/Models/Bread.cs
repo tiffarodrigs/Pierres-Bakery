@@ -4,43 +4,20 @@ namespace PierresBakery.Models
   public class Bread : Oven
   {
     // properties
-    //public  int Quantity{get; set;}
-      public int price = 5;
-      public int priceOfThree = 10;
-      public int totalPrice;
+    public int Price{get; set;}
+    public int PriceOfThree{get; set;}
+
 
     //constructor
-    public Bread()
+    public Bread(int breadPrice, int dealPrice)
     {
-
+      Price = breadPrice;
+      PriceOfThree = dealPrice;
     }
-    //Oven ovenObj= new Oven();
   
-   // ovenObj.CalculateBreadPrice(int inputQuantity);
-
-    // public int CalculateBreadPrice(int inputQuantity)
-    // {
-
-    //   int threeRemainder = inputQuantity % 3;
-    //   int countOfThree = inputQuantity / 3; 
-    //   if(inputQuantity<3)
-    //   {
-    //     totalPrice = price * inputQuantity;
-    //   }
-    //   else
-    //   {
-    //     if(threeRemainder == 0)
-    //     {
-    //       totalPrice =  priceOfThree * countOfThree;
-    //     }
-    //     else
-    //     {
-    //       totalPrice =  priceOfThree * countOfThree;
-    //       totalPrice +=  price * threeRemainder;
-    //     }
-    //   }
-    //   return totalPrice;
-    // }
-
+    public int CalculateBreadPrice(int inputQuantity)
+    {
+      return CalculatePrice(inputQuantity,Price,PriceOfThree);
+    }
   }
 }

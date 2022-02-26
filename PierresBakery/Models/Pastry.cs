@@ -1,42 +1,23 @@
 using System;
 namespace PierresBakery.Models
 {
-  public class Pastry
+  public class Pastry : Oven
   {
     // properties
-    public int Quantity{get; set;}
+    public int Price{get; set;}
+    public int PriceOfThree{get; set;}
+
 
     //constructor
-    public Pastry(int quantity)
+    public Pastry(int pastryPrice, int dealPrice)
     {
-      Quantity = quantity;
+      Price = pastryPrice;
+      PriceOfThree = dealPrice;
     }
 
     public int CalculatePastryPrice(int inputQuantity)
     {
-      int price = 2;
-      int priceOfThree = 5;
-      int totalPrice; 
-      int threeRemainder = inputQuantity % 3;
-      int countOfThree = inputQuantity / 3;
-      if(inputQuantity<3)
-      {
-      totalPrice = price * inputQuantity;
-      }
-      else
-      {
-        if(threeRemainder == 0)
-        {
-          totalPrice = priceOfThree * countOfThree;
-        }
-        else
-        {
-          totalPrice = priceOfThree * countOfThree;
-          totalPrice += price * threeRemainder;
-        }
-
-      }
-      return totalPrice;
+      return CalculatePrice(inputQuantity,Price,PriceOfThree);
     }
 
   }
